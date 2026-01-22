@@ -41,6 +41,18 @@ Pull requests are welcome for bug fixes, features, and improvements.
 - Include tests for new functionality where applicable
 - Update documentation if your changes affect user-facing features
 
+#### AI-Assisted Development
+We welcome and expect contributors to use AI and AI-assisted tools in their workflow. These tools can be a tremendous force for good, accelerating development and helping produce higher-quality contributions.
+
+However, AI-generated content requires human oversight. Before committing any AI-assisted work:
+
+- **Proofread thoroughly** - AI can produce plausible-sounding but incorrect content
+- **Validate all code** - Test that it actually works as intended
+- **Verify facts and references** - AI can hallucinate documentation links, API details, and technical specifications
+- **Review for security** - Ensure no vulnerabilities or sensitive data have been introduced
+
+You are responsible for the code you submit, regardless of how it was generated.
+
 ### Improve Documentation
 Documentation improvements are always appreciated. You can contribute to the docs at the [OpenGRC Documentation Repository](https://github.com/MangoldSecurity/OpenGRC-Docs).
 

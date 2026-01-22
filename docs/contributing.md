@@ -1,6 +1,11 @@
 # Contributing to OpenGRC
 
-Thank you for your interest in contributing to OpenGRC! This project is open-source and welcomes contributions from the community.
+Thank you for your interest in contributing to OpenGRC! This project is open-source and welcomes contributions from the community. Pull requests are welcome!
+
+## Repositories
+
+- **Application**: [https://github.com/LeeMangold/OpenGRC](https://github.com/LeeMangold/OpenGRC)
+- **Documentation**: [https://github.com/MangoldSecurity/OpenGRC-Docs](https://github.com/MangoldSecurity/OpenGRC-Docs)
 
 ## Ways to Contribute
 
@@ -37,7 +42,7 @@ Pull requests are welcome for bug fixes, features, and improvements.
 - Update documentation if your changes affect user-facing features
 
 ### Improve Documentation
-Documentation improvements are always appreciated. You can contribute to the docs at the [OpenGRC Documentation Repository](https://github.com/LeeMangold/opengrc-docs).
+Documentation improvements are always appreciated. You can contribute to the docs at the [OpenGRC Documentation Repository](https://github.com/MangoldSecurity/OpenGRC-Docs).
 
 ## Code of Conduct
 

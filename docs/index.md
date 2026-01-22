@@ -29,9 +29,16 @@ OpenGRC, LLC offers business-grade hosting for those who don't have the expertis
 ## Documentation
 All OpenGRC Documentation is maintained at [https://docs.opengrc.com](https://docs.opengrc.com).
 
+Documentation source repository: [https://github.com/MangoldSecurity/OpenGRC-Docs](https://github.com/MangoldSecurity/OpenGRC-Docs)
+
 ## Contributing to OpenGRC
 
-OpenGRC is an open-source project and we welcome contributions. More details at [Contributing](https://docs.opengrc.com/contributing)
+OpenGRC is an open-source project and we welcome contributions. Pull requests are welcome for both the application and documentation!
+
+- **Application**: [https://github.com/LeeMangold/OpenGRC](https://github.com/LeeMangold/OpenGRC)
+- **Documentation**: [https://github.com/MangoldSecurity/OpenGRC-Docs](https://github.com/MangoldSecurity/OpenGRC-Docs)
+
+More details at [Contributing](https://docs.opengrc.com/contributing)
 
 ## License
 OpenGRC is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International

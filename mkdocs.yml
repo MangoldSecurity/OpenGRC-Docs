@@ -23,8 +23,9 @@ repo_url: https://github.com/LeeMangold/OpenGRC
 edit_uri: edit/main/docs/
 nav:
   - Getting Started:
-    - Getting Started: index.md    
+    - Getting Started: index.md
     - Installation: installation.md
+    - Queue Worker: queue-worker.md
     - Updating: updating.md
   - GRC Foundations:
     - Important Terms: foundations/key-terms.md

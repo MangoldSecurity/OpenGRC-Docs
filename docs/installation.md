@@ -92,6 +92,20 @@ This command allows you to reset the password for an existing user.
 
 ---
 
+## Step 5: Configure the Queue Worker
+
+OpenGRC uses Laravel's queue system for background processing of tasks such as sending emails, processing imports, and running scheduled jobs. You must run a queue worker for these features to function properly.
+
+For development or testing, you can run the queue worker manually:
+
+```bash
+php artisan queue:work
+```
+
+**For production environments**, you should use a process manager like Supervisor to keep the queue worker running continuously. See the [Queue Worker Configuration](queue-worker.md) guide for detailed setup instructions, including Supervisor configuration and common pitfalls.
+
+---
+
 # Docker Installation
 
 OpenGRC includes a production-ready Dockerfile based on Ubuntu 24.04 with Apache, PHP 8.3, and Node.js 20.

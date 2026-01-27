@@ -19,6 +19,22 @@ The checklist feature supports:
 3. Assign / Complete the Checklist
 4. Approve
 
+```mermaid
+block-beta
+    columns 4
+    step1["Create\n Template"] 
+    space
+    step2["Create Checklist\n from Template"] 
+    space 
+    step3["Assign/Complete\n Checklist"]
+    space
+    step4["Approve \nChecklist"]
+
+    step1 --> step2
+    step2 --> step3
+    step3 --> step4
+```
+
 
 **Example:** A "Monthly Security Review" template can generate a new checklist each month for your team to complete.
 

@@ -34,6 +34,7 @@ nav:
   - Features:
     - Trust Center: features/trustcenter.md
     - Policies: features/policies.md
+    - Checklists: features/checklists.md
     - Vendor Risk Management (TPRM): features/vendor-management.md
     - Risk Management: features/risk-management.md
     - Asset Management: features/assets.md

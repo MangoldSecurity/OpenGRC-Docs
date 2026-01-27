@@ -13,80 +13,14 @@ The checklist feature supports:
 - Approval workflow with digital signatures
 - Recurring schedules for automated checklist generation
 
-## Checklist Workflow
+### Process Overview
+1. Create a new Template
+2. Create a new Checklist based on that template
+3. Assign / Complete the Checklist
+4. Approve
 
-```mermaid
-flowchart LR
-    subgraph Templates
-        A[Create Template] --> B[Add Items]
-        B --> C{Set Status}
-        C -->|Draft| B
-        C -->|Active| D[Template Ready]
-    end
-
-    subgraph Checklists
-        D -->|Manual| E[Create Checklist]
-        D -->|Recurring| F[Auto-Generate]
-        F --> E
-        E --> G[Assign User]
-        G --> H[Fill Out Items]
-        H --> I{Complete?}
-        I -->|No| J[Save Progress]
-        J --> H
-        I -->|Yes| K[Submit]
-    end
-
-    subgraph Approval
-        K --> L{Requires Approval?}
-        L -->|No| M[Done]
-        L -->|Yes| N[Review]
-        N --> O[Approve & Sign]
-        O --> M
-    end
-```
-
-## Templates vs Checklists
-
-| Concept | Description |
-|---------|-------------|
-| **Template** | A reusable blueprint that defines checklist items. Templates can be used multiple times to create checklist instances. |
-| **Checklist** | An individual instance created from a template. Checklists are assigned to users, completed, and optionally approved. |
 
 **Example:** A "Monthly Security Review" template can generate a new checklist each month for your team to complete.
-
-## Template Attributes
-
-Each template includes the following information:
-
-| Field | Description |
-|-------|-------------|
-| **Title** | Template name |
-| **Description** | Optional description of the template's purpose |
-| **Status** | Draft, Active, or Archived |
-| **Default Assignee** | User automatically assigned when creating checklists |
-| **Recurrence** | Schedule for automatic checklist generation |
-| **Items** | The checklist items to be completed |
-
-## Template Statuses
-
-| Status | Description |
-|--------|-------------|
-| **Draft** | Template is being developed, cannot create checklists |
-| **Active** | Template is ready for use, can create checklists |
-| **Archived** | Template is retired, cannot create new checklists |
-
-## Checklist Item Types
-
-Templates support multiple item types to capture different kinds of responses:
-
-| Type | Description | Use Case |
-|------|-------------|----------|
-| **Yes/No Checkbox** | Simple boolean confirmation | "Has the backup been verified?" |
-| **Short Text** | Brief text response (single line) | "Enter the ticket number" |
-| **Long Text** | Detailed text response (multi-line) | "Describe any issues encountered" |
-| **Single Choice** | Select one option from a list | "Select the severity level" |
-| **Multiple Choice** | Select multiple options from a list | "Select all applicable categories" |
-| **File Upload** | Attach documents or evidence | "Upload the scan report" |
 
 ## Creating a Template
 
@@ -235,6 +169,18 @@ Filter the checklist list by:
 - **Due Date** - Filter by due date range
 - **Approval Status** - Pending, Approved
 
+## Best Practices
+
+- **Start with Draft** - Build templates in Draft status, switch to Active when ready
+- **Use clear item text** - Write items as clear questions or tasks
+- **Add help text** - Provide guidance for complex items
+- **Set appropriate types** - Choose item types that match the expected response
+- **Plan recurrence carefully** - Consider workload when setting up recurring checklists
+- **Review before approval** - Thoroughly review completed checklists before approving
+- **Clone templates** - Use the duplicate feature to create variations of existing templates
+
+---
+
 ## Permissions
 
 | Permission | Capabilities |
@@ -256,12 +202,40 @@ Default role assignments:
 - **Security Admin** - List, Create, Read, Update (no Delete)
 - **Regular User** - List, Read only
 
-## Best Practices
+## Template Attributes
 
-- **Start with Draft** - Build templates in Draft status, switch to Active when ready
-- **Use clear item text** - Write items as clear questions or tasks
-- **Add help text** - Provide guidance for complex items
-- **Set appropriate types** - Choose item types that match the expected response
-- **Plan recurrence carefully** - Consider workload when setting up recurring checklists
-- **Review before approval** - Thoroughly review completed checklists before approving
-- **Clone templates** - Use the duplicate feature to create variations of existing templates
+Each template includes the following information:
+
+| Field | Description |
+|-------|-------------|
+| **Title** | Template name |
+| **Description** | Optional description of the template's purpose |
+| **Status** | Draft, Active, or Archived |
+| **Default Assignee** | User automatically assigned when creating checklists |
+| **Recurrence** | Schedule for automatic checklist generation |
+| **Items** | The checklist items to be completed |
+
+## Template Statuses
+
+| Status | Description |
+|--------|-------------|
+| **Draft** | Template is being developed, cannot create checklists |
+| **Active** | Template is ready for use, can create checklists |
+| **Archived** | Template is retired, cannot create new checklists |
+
+## Checklist Item Types
+
+Templates support multiple item types to capture different kinds of responses:
+
+| Type | Description | Use Case |
+|------|-------------|----------|
+| **Yes/No Checkbox** | Simple boolean confirmation | "Has the backup been verified?" |
+| **Short Text** | Brief text response (single line) | "Enter the ticket number" |
+| **Long Text** | Detailed text response (multi-line) | "Describe any issues encountered" |
+| **Single Choice** | Select one option from a list | "Select the severity level" |
+| **Multiple Choice** | Select multiple options from a list | "Select all applicable categories" |
+| **File Upload** | Attach documents or evidence | "Upload the scan report" |
+
+
+
+

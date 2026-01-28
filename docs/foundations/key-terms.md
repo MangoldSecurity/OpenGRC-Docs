@@ -6,9 +6,9 @@ These are the things you MUST know to effectively use OpenGRC. This should be co
 graph TD
     A[Standard<br><i>eg. 800-171r3</i>] --> B[Control]
     
-    B[Control<br><i>eg. 03.01.01-h Account Management</i>] --> C[Implementation<br><i>eg. GPO is configured to auto-logout after 15 minutes </i>]
+    B[Control<br><i>eg. 03.01.01-h <br>Account Management</i>] --> C[Implementation<br><i>eg. GPO is configured to <br>auto-logout after 15 minutes </i>]
     
-    B --> D[Implementation<br><i>eg. SSH is configured to auto-logout after 15 minutes </i>]
+    B --> D[Implementation<br><i>eg. SSH is configured to <br>auto-logout after 15 minutes </i>]
 
     style A fill:#e1f5fe
     style B fill:#f3e5f5

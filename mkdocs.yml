@@ -40,6 +40,9 @@ nav:
     - Asset Management: features/assets.md
     - Applications: features/applications.md    
   - Configuration:
+    - Data Manager:
+      - Exporting Data: data-manager/export.md
+      - Importing Data: data-manager/import.md
     - Settings:
       - General: settings/general.md
       - AI: settings/ai.md

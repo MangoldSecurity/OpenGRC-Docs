@@ -38,6 +38,11 @@ Use a Program Audit when:
 - Preparing for audits that span multiple standards (e.g., CMMC)
 - Reporting on the overall health of a security program to leadership
 
+## AI-Powered Audits
+
+!!! enterprise "Enterprise Feature"
+    OpenGRC Enterprise includes **AI-Powered Audits** that can automatically assess every control in your audit against your documented implementations and policies. Launch an AI audit from the **Workflow** menu on any in-progress audit to get effectiveness ratings, applicability determinations, and detailed auditor notes in minutes. [Learn more](../enterprise/ai-audit.md).
+
 ## Audit Statuses
 
 During an audit, each item is assigned a status:

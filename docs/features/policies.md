@@ -13,6 +13,8 @@ Policies in OpenGRC are organizational documents that define rules, guidelines, 
 - Department and scope classification
 - Owner assignment and accountability
 
+![Policy List](../img/features/policies-list.png)
+
 ## Policy Attributes
 
 Each policy includes the following information:
@@ -22,6 +24,7 @@ Each policy includes the following information:
 | **Code** | Unique identifier (e.g., POL-001) |
 | **Name** | Policy title |
 | **Status** | Current lifecycle status |
+| **Type** | Document type (Policy, Procedure, Standard) |
 | **Department** | Responsible department |
 | **Scope** | Applicability scope |
 | **Owner** | Policy owner (user) |
@@ -52,134 +55,89 @@ Policies progress through the following statuses:
 
 Policies can be scoped to different organizational levels:
 
-- **Organization-wide** - Applies to the entire organization
-- **Department-specific** - Applies to a specific department
-- **Project-specific** - Applies to a specific project
-- **Regional** - Applies to a specific region
-- **Global** - Applies globally across all entities
+- **Organization-wide** -- Applies to the entire organization
+- **Department-specific** -- Applies to a specific department
+- **Project-specific** -- Applies to a specific project
+- **Regional** -- Applies to a specific region
+- **Global** -- Applies globally across all entities
 
 ## Creating a Policy
 
-### Step 1: Navigate to Policies
-1. Go to **Policies** in the main navigation
-2. Click **Create Policy**
+1. Navigate to **Policies** in the main navigation
+2. Click **New Policy**
+3. Enter a unique **Code** or use the auto-generated format
+4. Enter a descriptive **Name**
+5. Select the **Status** (typically Draft)
+6. Select the **Department** and **Scope**
+7. Assign a policy **Owner**
+8. Set the **Effective Date**
+9. Add policy content in **Policy Scope**, **Purpose**, and **Body** fields
+10. Optionally attach a document (PDF, DOC, DOCX -- max 10MB)
+11. Click **Create** to save
 
-### Step 2: Enter Core Information
-1. **Code** - Enter a unique policy code or use auto-generated format
-2. **Name** - Enter a descriptive policy name
-3. **Status** - Select initial status (typically Draft)
-4. **Department** - Select the responsible department
-5. **Scope** - Select the applicability scope
-6. **Owner** - Assign a policy owner
-7. **Effective Date** - Set when the policy takes effect
+## Viewing a Policy
 
-### Step 3: Add Policy Content
-1. **Policy Scope** - Describe what the policy covers
-2. **Purpose** - Explain why this policy exists
-3. **Body** - Enter the full policy content using the rich text editor
+The policy detail view shows the full policy content with metadata in a clean, readable format.
 
-### Step 4: Attach Document (Optional)
-Upload a policy document file:
-- Supported formats: PDF, DOC, DOCX
-- Maximum size: 10MB
-- The document is stored securely and linked to the policy
+![Policy Detail](../img/features/policies-detail.png)
 
-### Step 5: Add Revision History
-Track policy versions:
-1. Click **Add Revision**
-2. Enter version number (e.g., "1.0", "2.1")
-3. Enter revision date
-4. Enter author name
-5. Describe the changes made
+The detail view includes:
 
-### Step 6: Save
-Click **Create** to save the policy.
+- **Header** with policy code, effective date, owner, and status
+- **Purpose** section explaining why the policy exists
+- **Scope** section defining applicability
+- **Body** with full policy content rendered as rich text
+- **Attached document** available for download
+- **Revision history** table tracking all versions
 
-## Managing Policies
+## Linking Policies
 
-### Editing Policies
-1. Navigate to the policy list
-2. Click on a policy to view it
-3. Click **Edit** to modify
-4. Update fields as needed
-5. Add a new revision history entry for significant changes
-6. Save changes
-
-### Viewing Policy Document
-The policy detail view displays:
-- Header with policy metadata (code, effective date, owner)
-- Purpose section
-- Scope section
-- Full policy body content
-- Attached document indicator
-- Complete revision history table
-
-### Linking to Controls
+### Controls
 Associate policies with security controls:
+
 1. Open the policy detail view
 2. Go to the **Controls** tab
 3. Click **Attach** to add controls
 4. Search and select relevant controls
-5. The policy now shows which controls it supports
 
-### Linking to Implementations
+### Implementations
 Associate policies with implementations:
+
 1. Open the policy detail view
 2. Go to the **Implementations** tab
 3. Click **Attach** to add implementations
-4. Select implementations that enforce this policy
 
-### Linking to Risks
+### Risks
 Associate policies with risks they address:
+
 1. Open the policy detail view
 2. Go to the **Risks** tab
 3. Click **Attach** to add risks
-4. Select risks that this policy helps mitigate
 
 ## Version Control
 
 ### Adding Revisions
 When updating a policy:
+
 1. Open the policy for editing
 2. Scroll to **Revision History**
 3. Click **Add Revision**
-4. Fill in:
-   - **Version** - New version number
-   - **Date** - Date of revision
-   - **Author** - Who made the changes
-   - **Changes** - Description of what changed
+4. Fill in version number, date, author, and changes description
 5. Save the policy
 
 ### Viewing Revision History
-The revision history displays all versions chronologically, showing:
-- Version number
-- Revision date
-- Author
-- Summary of changes
+The revision history displays all versions chronologically, showing version number, revision date, author, and summary of changes.
 
 ## Filtering and Searching
 
-### Search
-Search policies by:
-- Code
-- Name
-- Policy scope content
-- Purpose content
+**Search** policies by code, name, scope content, or purpose content.
 
-### Filters
-Filter the policy list by:
-- **Status** - Draft, Approved, Archived, etc.
-- **Scope** - Organization-wide, Department-specific, etc.
-- **Department** - Responsible department
-- **Has Document** - Whether a document is attached
+**Filter** the policy list by:
 
-### Sorting
-Sort by any column including:
-- Name
-- Code
-- Status
-- Created date
-- Updated date
+- **Status** -- Draft, Approved, Archived, etc.
+- **Scope** -- Organization-wide, Department-specific, etc.
+- **Department** -- Responsible department
+- **Has Document** -- Whether a document is attached
 
 ## Permissions
 
@@ -191,17 +149,12 @@ Sort by any column including:
 | **Update Policies** | Edit existing policies |
 | **Delete Policies** | Remove policies |
 
-Default role assignments:
-- **Super Admin** - All permissions
-- **Security Admin** - List, Create, Read, Update
-- **Regular User** - List, Read only
-
 ## Best Practices
 
-- **Use consistent naming** - Establish a naming convention for policy codes and titles
-- **Set review schedules** - Plan regular policy reviews (annually recommended)
-- **Track all changes** - Add revision history entries for every significant update
-- **Link to controls** - Connect policies to the controls they support for traceability
-- **Assign clear ownership** - Every policy should have an accountable owner
-- **Archive don't delete** - Use Archive or Retired status instead of deleting policies
-- **Keep documents current** - Update attached documents when policies change
+- **Use consistent naming** -- Establish a naming convention for policy codes and titles
+- **Set review schedules** -- Plan regular policy reviews (annually recommended)
+- **Track all changes** -- Add revision history entries for every significant update
+- **Link to controls** -- Connect policies to the controls they support for traceability
+- **Assign clear ownership** -- Every policy should have an accountable owner
+- **Archive don't delete** -- Use Archive or Retired status instead of deleting policies
+- **Keep documents current** -- Update attached documents when policies change

@@ -169,7 +169,7 @@ docker run -d -p 80:80 \
 
 The Docker image includes:
 
-- **PHP 8.3** with FPM (optimized for 1GB memory)
+- **PHP 8.4** with FPM (optimized for 1GB memory)
 - **Apache 2** with mod_rewrite, mod_headers, and mod_security2
 - **ModSecurity** with OWASP Core Rule Set
 - **Health checks** via HTTP on port 80

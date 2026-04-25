@@ -1,7 +1,7 @@
 
 # OpenGRC Installation Guide
 
-This guide walks you through setting up **OpenGRC**, a Laravel 11 application built with Filament 3, from cloning the repository to running the application on your local environment.
+This guide walks you through setting up **OpenGRC**, a Laravel 12 application built with Filament 4, from cloning the repository to running the application on your local environment.
 
 ## Prerequisites
 

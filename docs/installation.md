@@ -7,7 +7,8 @@ This guide walks you through setting up **OpenGRC**, a Laravel 11 application bu
 
 Before you begin, make sure your system meets the following minimum requirements:
 
-- **PHP**: 8.2 or higher
+- **PHP**: 8.4 or higher
+    - Note: 8.4 is a new requirement!
     - Recommended extensions: `mbstring`, `openssl`, `pdo`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`, `fileinfo`
 - **Composer**: 2.5 or higher
 - **Node.js**: 18.0 or higher

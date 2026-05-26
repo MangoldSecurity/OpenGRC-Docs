@@ -1,13 +1,14 @@
 
 # OpenGRC Installation Guide
 
-This guide walks you through setting up **OpenGRC**, a Laravel 11 application built with Filament 3, from cloning the repository to running the application on your local environment.
+This guide walks you through setting up **OpenGRC**, a Laravel 12 application built with Filament 4, from cloning the repository to running the application on your local environment.
 
 ## Prerequisites
 
 Before you begin, make sure your system meets the following minimum requirements:
 
-- **PHP**: 8.2 or higher
+- **PHP**: 8.4 or higher
+    - Note: 8.4 is a new requirement!
     - Recommended extensions: `mbstring`, `openssl`, `pdo`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`, `fileinfo`
 - **Composer**: 2.5 or higher
 - **Node.js**: 18.0 or higher
@@ -168,7 +169,7 @@ docker run -d -p 80:80 \
 
 The Docker image includes:
 
-- **PHP 8.3** with FPM (optimized for 1GB memory)
+- **PHP 8.4** with FPM (optimized for 1GB memory)
 - **Apache 2** with mod_rewrite, mod_headers, and mod_security2
 - **ModSecurity** with OWASP Core Rule Set
 - **Health checks** via HTTP on port 80

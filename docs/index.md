@@ -53,6 +53,8 @@ OpenGRC is licensed under the Creative Commons Attribution-NonCommercial-ShareAl
 
 If you believe you have found a security vulnerability in OpenGRC, please let us know using [responsible channels](https://github.com/LeeMangold/OpenGRC/security/policy). 
 
+**NOTICE:** We highly recommend running OpenGRC (and all web applications) behind a suitable web application firewall if you are hosting on the internet (and not a private connection).
+
 ## Acknowledgements
 
 OpenGRC is built on the shoulders of giants. We would like to thank the following projects for their contributions, whether direct or indirect, to OpenGRC:

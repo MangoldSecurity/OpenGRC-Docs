@@ -44,10 +44,12 @@ nav:
     - Applications: features/applications.md
   - Enterprise Features:
     - AI-Powered Audits: enterprise/ai-audit.md
+    - AI MCP Server: enterprise/mcp-server.md
     - Incident Management: enterprise/incident-management.md
     - Project Management: enterprise/project-management.md
     - Risk Assessor: enterprise/risk-assessor.md
     - Surveyor: enterprise/surveyor.md
+    - MCP Server: enterprise/mcp-server.md
   - Configuration:
     - Data Manager:
       - Exporting Data: data-manager/export.md

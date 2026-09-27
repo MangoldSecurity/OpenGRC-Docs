@@ -25,7 +25,17 @@ AI-Powered Audits help organizations:
 
 ![Workflow Menu](../img/enterprise/ai-audit-workflow-menu.png)
 
-A confirmation dialog shows the estimated processing time (approximately 1 minute per audit item) and notes that the AI assesses implementations and policies -- not attached evidence files.
+A confirmation dialog shows the estimated processing time (approximately 1 minute per audit item) and notes that the AI assesses implementations and policies -- not attached evidence files. Starting the audit overwrites any existing AI assessments on its items.
+
+### Scoping an AI Audit
+
+The same dialog lets you constrain which implementations and policies the AI is allowed to consider:
+
+- **Department**, **Scope**, and **Tags** -- each is a filter you can select multiple values for. A record must match *every* filter you set (Department AND Scope AND Tags), but matching *any* selected value within a single filter is enough (e.g. selecting two tags matches records with either one)
+- **Apply this scope to** -- checkboxes for **Implementations** and **Policies**. Leave an evidence type unchecked to leave it completely unrestricted -- useful since policies are usually enterprise-wide, so an enterprise policy is still valid evidence for a control scoped to one department
+- A **Matching records** summary updates live to show how many records satisfy the current filters
+
+Leave every filter empty to let the AI consider all eligible data, as before. Use scoping when you want an AI audit to reflect only a specific department's evidence, a particular organizational scope, or a set of tagged records -- see [Custom Tagging](custom-tagging.md) for how tags are created.
 
 ### What the AI Evaluates
 

@@ -54,6 +54,16 @@ You can also run **AI Risk Discovery** which analyzes your implementations to fi
 
 **Manual mode:** Search and add risks from the Risk Register, add all active risks at once, or create custom risks with title, description, and inherent likelihood/impact scores.
 
+### Scoping AI Analysis
+
+Click **AI Scope** at the top of the assessment wizard to constrain what the AI considers for both AI Risk Discovery and AI residual scoring:
+
+- **Department**, **Scope**, and **Tags** -- each accepts multiple values. A record must match *every* filter you set (Department AND Scope AND Tags), while matching *any* selected value within one filter is enough
+- **Apply this scope to** -- checkboxes for **Implementations** and **Policies**. An unchecked evidence type is left completely unrestricted, since an enterprise-wide policy can still be valid evidence even when a control is scoped to one department
+- A **Matching records** summary shows how many records satisfy the current filters
+
+Leave every filter empty to let the AI consider all eligible data. This is useful for scoping an assessment to a specific business unit or a set of tagged systems -- see [Custom Tagging](custom-tagging.md) for how tags are created.
+
 ### Step 2: Assessment Method
 
 Configure assessment-wide settings before evaluation begins.

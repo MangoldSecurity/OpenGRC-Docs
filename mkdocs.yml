@@ -32,6 +32,9 @@ nav:
     - Updating: updating.md
   - GRC Foundations:
     - Important Terms: foundations/key-terms.md
+    - Standards: foundations/standards.md
+    - Controls: foundations/controls.md
+    - Implementations: foundations/implementations.md
     - Audits: foundations/audits.md
     - Workflows: foundations/workflows.md
   - Features:
@@ -43,13 +46,17 @@ nav:
     - Asset Management: features/assets.md
     - Applications: features/applications.md
   - Enterprise Features:
+    - Access Reviews: enterprise/access-reviews.md
     - AI-Powered Audits: enterprise/ai-audit.md
-    - AI MCP Server: enterprise/mcp-server.md
+    - AI Assistance for Controls: enterprise/ai-controls-assistant.md
+    - Approvals and Workflows: enterprise/approvals-and-workflows.md
+    - Custom Dashboards: enterprise/custom-dashboards.md
+    - Custom Tagging: enterprise/custom-tagging.md
     - Incident Management: enterprise/incident-management.md
+    - MCP Server: enterprise/mcp-server.md
     - Project Management: enterprise/project-management.md
     - Risk Assessor: enterprise/risk-assessor.md
     - Surveyor: enterprise/surveyor.md
-    - MCP Server: enterprise/mcp-server.md
   - Configuration:
     - Data Manager:
       - Exporting Data: data-manager/export.md

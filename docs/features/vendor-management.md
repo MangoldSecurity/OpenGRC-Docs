@@ -89,66 +89,64 @@ Click **Create** to save the vendor.
 OpenGRC supports two assessment approaches:
 
 **Internal Assessment**
-- Completed by your team
-- Assigned to an internal user
-- Based on your knowledge of the vendor
+- Completed by you, based on your team's existing knowledge of the vendor
+- No email or external link involved -- you answer the questionnaire directly in OpenGRC
 
 **External Assessment (Send Survey)**
 - Completed by the vendor
-- Sent via email with magic link
-- Vendor completes questionnaire directly
+- Sent via email with a secure, time-limited link (30-day token)
+- Vendor completes the questionnaire directly, without an OpenGRC account
 
-### Sending a Vendor Assessment
+### Sending or Assigning a Vendor Assessment
 
 1. Navigate to the vendor detail page
-2. Go to the **Surveys** tab
-3. Click **Assess Risk**
-4. Select assessment type:
-   - **Send Survey** - External vendor assessment
-   - **Internal Assessment** - Internal team assessment
-5. Choose a survey template
-6. For external surveys:
-   - Enter respondent email
-   - Enter respondent name
-7. Set due date
-8. Click **Send** or **Create**
+2. Click **Send Survey** or **Assess Risk** in the page header (or **Assess Risk** on the **Surveys** tab) -- both open the same dialog
+3. Choose an **Assessment type**:
+   - **Internal Assessment** - You complete the questionnaire yourself based on what you already know
+   - **Send Survey** - The vendor receives a link and completes the questionnaire themselves
+4. Select a **Survey template**
+5. For **Send Survey**, also enter:
+   - **Respondent email** (required)
+   - **Respondent name** (optional)
+   - **Personal message** (optional note included in the invitation email)
+6. Optionally set a **Due date**
+7. Click **Start Internal Assessment** or **Send to Vendor**
 
-### Pre-built Security Survey Template
+!!! note "Assigning to a teammate"
+    The quick dialog above always starts the Internal Assessment as you. To assign it to a different internal teammate instead, open the survey's full record (via the vendor's **Surveys** tab, or **Create Survey** from a survey template) and set **Assigned To** under **Respondent Information** -- this field is only available on the full survey form, not the quick dialog.
 
-OpenGRC includes a comprehensive vendor security survey with 20 questions across 7 categories:
+### Completing an Internal Assessment
 
-**Governance & Security Program**
-- Documented security program
-- Dedicated security oversight
-- Annual policy reviews
+Starting an Internal Assessment takes you directly into the questionnaire:
 
-**Data Protection & Privacy**
-- Data restricted to authorized use
-- Encryption in transit and at rest
-- Access restrictions by business need
+- The **Sections** sidebar lists each section of the survey with its answered-question count, plus a **Total Progress** counter
+- Each question shows its number, **Required**/**Weight** badges, the question text, and a **Where to find this** hint pointing to the relevant category of evidence
+- Answer using the input appropriate to the question type (e.g. Yes/No toggle), and optionally **Add comment** on any question
+- Click **Save & exit** to save progress and finish later, or **Submit** once all required questions are answered
 
-**Identity & Access Management**
-- MFA for administrative access
-- Timely user account removal
-- Regular access reviews
+The survey then appears on the vendor's **Surveys** tab with your name as the respondent, and its status and risk score update automatically as described below.
 
-**Infrastructure & Operations Security**
-- Endpoint security and protection
-- Timely security patching
-- System logging and monitoring
+### Recurring Vendor Assessments
 
-**Incident Response & Resilience**
-- Documented incident response plan
-- Customer breach notification process
-- Backup and restoration testing
+Any survey (internal or external) can be set to automatically regenerate on a schedule instead of being a one-time assessment:
 
-**Third-Party & Supply Chain Risk**
-- Subcontractor security requirements
-- Formal vendor security assessment
+1. Open the survey's full record (**Edit**, from the vendor's **Surveys** tab)
+2. Expand the **Recurrence** section
+3. Set **Frequency** to how often a new survey should be generated: **Daily**, **Weekly**, **Monthly**, **Quarterly**, **Semi-Annual** (every 6 months), or **Yearly**
+4. Click **Save changes**
 
-**Compliance & Assurance**
-- Recent third-party assessments
-- Security assurance documentation
+The vendor's **Surveys** tab shows a **Recurrence** column with the configured frequency and a **Next Due** column with the date the next instance will be generated, so you can see upcoming reassessments at a glance.
+
+### Resending Questions for Correction
+
+If a respondent's answers need clarification or correction, you can send back just the affected questions instead of re-issuing the entire survey:
+
+1. Open the survey and click **Resend Selected Questions**
+2. In the **Questions to resend** list, search or use **Select all** to choose the specific questions to send back
+3. Optionally add a **Note to respondent** explaining why the questions are being returned -- this is included in the email and shown above the questions
+4. Click **Send Follow-up**
+
+Only the selected questions are sent back to the respondent as a follow-up; answers already submitted on the rest of the survey stay intact.
 
 ### Survey Question Types
 

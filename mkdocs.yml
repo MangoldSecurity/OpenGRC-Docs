@@ -50,10 +50,13 @@ nav:
     - AI-Powered Audits: enterprise/ai-audit.md
     - AI Assistance for Controls: enterprise/ai-controls-assistant.md
     - Approvals and Workflows: enterprise/approvals-and-workflows.md
+    - Auditor Portal: enterprise/auditor-portal.md
     - Custom Dashboards: enterprise/custom-dashboards.md
     - Custom Tagging: enterprise/custom-tagging.md
     - Incident Management: enterprise/incident-management.md
     - MCP Server: enterprise/mcp-server.md
+    - My Portal: enterprise/my-portal.md
+    - Policy Acknowledgements: enterprise/policy-acknowledgements.md
     - Project Management: enterprise/project-management.md
     - Risk Assessor: enterprise/risk-assessor.md
     - Surveyor: enterprise/surveyor.md

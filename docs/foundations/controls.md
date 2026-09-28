@@ -75,7 +75,9 @@ Optional fields let you add more detail:
 From a control's detail page:
 
 - **Submit for Approval** starts the approval chain for the control record
-- **Request Update** generates a secure link so someone else can update the control without needing full OpenGRC access. Assign it to an **External portal user** or an **Internal user**, and optionally configure a **Link expiration**, make it **Single use**, or leave it **Resumable** so progress is saved as a draft between visits
+- **Request Update** asks someone to review and correct the whole record -- there's no way to scope it to specific fields or attach a note. Choose **Assign to**:
+    - **External portal user** -- select or create a portal user, then optionally set **Link expires** (default ~7 days, blank for no expiry), **Single use** (the link stops working after first opened), and **Resumable** (progress saved as a draft between visits, on by default). The recipient gets an emailed magic link into [My Portal](../enterprise/my-portal.md#record-update-requests), where a pre-populated review form lets them propose changes for **Submit for review** -- they never write directly to the control
+    - **Internal user** -- no link fields; the assignee simply gets a to-do on their **To-Do & Approvals** page (Update Requests tab) with no email sent, and uses the ordinary **Edit** action to make the change themselves
 
 ## AI Assistant
 

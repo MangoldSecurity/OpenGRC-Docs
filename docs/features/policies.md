@@ -158,3 +158,7 @@ The revision history displays all versions chronologically, showing version numb
 - **Assign clear ownership** -- Every policy should have an accountable owner
 - **Archive don't delete** -- Use Archive or Retired status instead of deleting policies
 - **Keep documents current** -- Update attached documents when policies change
+
+## Related Documentation
+
+- [Policy Acknowledgements](../enterprise/policy-acknowledgements.md) -- Enterprise feature for distributing approved policies for workforce sign-off

@@ -97,6 +97,9 @@ OpenGRC supports two assessment approaches:
 - Sent via email with a secure, time-limited link (30-day token)
 - Vendor completes the questionnaire directly, without an OpenGRC account
 
+!!! enterprise "Enterprise Feature"
+    In OpenGRC Enterprise, the same link also lets the vendor set up a password on first use, giving them persistent access to the [Vendor Portal](#vendor-portal) rather than a single-use link. [Learn more about Enterprise](https://opengrc.com).
+
 ### Sending or Assigning a Vendor Assessment
 
 1. Navigate to the vendor detail page
@@ -250,6 +253,8 @@ The system tracks document expiration:
 
 ## Vendor Portal
 
+The Vendor Portal is a separate, vendor-branded application where vendor contacts sign in to complete assigned surveys and manage their compliance documents. It's reached at the `/portal/` path on your OpenGRC instance (e.g. `https://yourcompany.opengrc.net/portal/`) and is entirely distinct from the main admin app and from [My Portal](../enterprise/my-portal.md) (the internal staff task portal) -- vendor credentials only work at `/portal/`.
+
 ### Inviting Vendor Users
 
 Enable vendors to access their own portal:
@@ -260,14 +265,23 @@ Enable vendors to access their own portal:
 5. Vendor receives invitation email
 6. They set their password to activate access
 
+!!! enterprise "Enterprise Feature"
+    In OpenGRC Enterprise, a vendor user account can also be created implicitly the first time a **Send Survey** invitation link is used (see [Sending or Assigning a Vendor Assessment](#sending-or-assigning-a-vendor-assessment)): the emailed link lets the recipient set up their own password and gain persistent access to the Vendor Portal, rather than requiring a separate invite step first. [Learn more about Enterprise](https://opengrc.com).
+
 ### Vendor Portal Capabilities
 
-Vendor users can:
-- View their assigned surveys
-- Complete survey questionnaires
-- Upload documents
-- View document status
-- Update contact information
+Signed in at `/portal/`, a vendor user's navigation is limited to two sections: **Surveys** and **Documents**.
+
+**Surveys** (`/portal/surveys`) lists every assessment assigned to the vendor, with columns **Survey**, **Status**, **Due Date**, **Progress**, **Received**, and an **Actions** column offering **View** (always) and **Respond** (only while the survey is still open). Opening an in-progress survey via **Respond** shows the same section-by-section questionnaire experience used for internal assessments -- a **Sections** sidebar with per-section progress, each question numbered with **Required**/**Weight** badges, a **Where to find this** hint, an answer control matching the question type, and an optional **Add comment** field per question. Answers save automatically as they're entered, so the vendor can leave and return later without losing progress; **Submit** stays disabled until every required question is answered.
+
+!!! enterprise "Enterprise Feature"
+    OpenGRC Enterprise adds two additional actions to the survey-response toolbar: **Download sheet**, which exports the survey as an Excel workbook (`.xlsx`) with one row per question (`question_id`, `category`, `question`, `type`, `allowed_options`, `required`, `answer`, and `comment`, including any answers and comments already entered), and **Upload answers**, which re-imports a completed copy of that workbook -- rows are matched back to questions by `question_id` and applied immediately, with a confirmation banner and notification reporting how many answers were imported. This lets a vendor answer offline (e.g. by routing the sheet to internal SMEs) and bulk-import the results. [Learn more about Enterprise](https://opengrc.com).
+
+Once a survey is **Completed**, it becomes read-only -- the **Respond** action disappears, only **View** remains, and the answers can no longer be changed through the portal. There is no vendor-side way to reopen a submitted survey; if corrections are needed after submission, use [Resending Questions for Correction](#resending-questions-for-correction) from the admin side.
+
+**Documents** (`/portal/documents`) lists the vendor's compliance documents with columns **Type**, **Name**, **Status**, **Expires**, and **Actions** (**View** / **Download**). **Upload Document** opens a form with **Document Type** (grouped by Security & Compliance, Legal & Commercial, and Other), **Document Name**, **Description**, a drag-and-drop **Document File** field, and optional **Issue Date** / **Expiration Date** fields. Once a document has been reviewed and approved, the vendor can only view and download it -- editing or replacing it requires uploading a new document record.
+
+Vendors can also update their own **Name**, **Email address**, and password from **Profile**, under the user menu.
 
 ### Managing Vendor Users
 
@@ -283,6 +297,11 @@ Vendor users can:
 
 **Revoke Access:**
 - Remove user access when no longer needed
+
+## Vendors as Audit Firms
+
+!!! enterprise "Enterprise Feature"
+    A vendor can be flagged as an **Audit firm** (on its edit page, in Vendor Information -- not available at creation) so it can be assigned as the external firm performing an audit. Once flagged, the vendor gains an **Auditors** tab listing its staff with [Auditor Portal](../enterprise/auditor-portal.md) access, separate from ordinary Vendor Users. [Learn more](../enterprise/auditor-portal.md).
 
 ## Vendor Management Dashboard
 

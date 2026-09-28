@@ -109,6 +109,11 @@ OpenGRC provides a comprehensive evidence export feature designed for handoff to
 
 This ensures auditors can verify that evidence has not been modified since collection and provides a complete, portable package of all audit artifacts.
 
+## Working with an External Audit Firm
+
+!!! enterprise "Enterprise Feature"
+    OpenGRC Enterprise adds an **Auditor Portal**: assign an audit to an external audit firm and give them their own scoped, invite-only access to work the engagement -- sharing requests, exchanging evidence, and proposing findings -- without granting them access to OpenGRC itself. [Learn more](../enterprise/auditor-portal.md).
+
 ## Best Practices
 
 - **Plan your audit scope** - Clearly define what will be assessed before starting

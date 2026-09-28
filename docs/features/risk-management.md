@@ -242,6 +242,10 @@ Risks can be accessed via the REST API:
 | `/api/risks/{id}` | PUT | Update risk |
 | `/api/risks/{id}` | DELETE | Delete risk |
 
+## Requesting an Update
+
+**Request Update**, on a risk's detail page, delegates a review of the record the same way it works for [controls](../foundations/controls.md#approvals-and-delegation) -- assign it to an external portal user for a magic-link review form in [My Portal](../enterprise/my-portal.md#record-update-requests), or to an internal user for a to-do on their To-Do & Approvals page.
+
 ## Best Practices
 
 - **Start with inherent risk** - Always assess the baseline risk before considering controls

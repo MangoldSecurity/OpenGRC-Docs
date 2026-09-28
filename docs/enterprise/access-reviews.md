@@ -51,7 +51,7 @@ Clicking **Launch UAR** opens a **Launch [date] Round** screen before anything i
 Click **Launch N Review Items** to start the round.
 
 !!! note "Portal Users as reviewers"
-    A System Owner or Application Owner can be a **Portal User** rather than a full internal OpenGRC user. Portal User reviewers complete their step via a magic link emailed to them, the same pattern used elsewhere for external reviewers (e.g. vendor surveys).
+    A System Owner or Application Owner can be a **Portal User** rather than a full internal OpenGRC user. Portal User reviewers complete their step via a magic link emailed into [My Portal](my-portal.md#access-review-responses), the same pattern used elsewhere for external reviewers (e.g. vendor surveys). Internal reviewers instead see their step on the **To-Do** page, as noted below.
 
 ### Running a Round
 
@@ -113,3 +113,7 @@ The Access Reviews home page shows:
 - Creating and managing campaigns requires access to the Access Reviews app
 - System Owners and Application Owners complete their step via the secure link in their notification email
 - Only the UAR Manager assigned to a campaign can make Manager Decisions and finalize a round
+
+## Related Documentation
+
+- [My Portal](my-portal.md) -- Where Portal User reviewers complete their step
